@@ -43,7 +43,6 @@ namespace InvestigationApp.Tests.Controllers
         }
 
 
-        #region GetOvertimeTypeById
 
         [Fact]
         [Trait("Category", nameof(SearchController.GetSearchResults))]
@@ -133,6 +132,5 @@ namespace InvestigationApp.Tests.Controllers
             #endregion
         }
 
-        #endregion
     }
 }
