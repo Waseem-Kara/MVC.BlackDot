@@ -3,4 +3,37 @@
 @{
 }
 
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+        <tr>
+            <th style="width: 400px">Title</th>
+            <th>Summary</th>
+            <th class="small-th">Source URL</th>
+            <th class="small-th">Provider</th>
+            <th class="small-th">
+                Save for summary
+
+                <a href="#" data-toggle="tooltip" title="By ticking the box it will store a summary of the source data into a file.">
+                    <i class="fas fa-question-circle"></i>
+                </a>
+            </th>
+
+        </tr>
+        </thead>
+        @foreach (var searchResult in Model)
+        {
+
+            <tr>
+                <td class="source-title">@searchResult.SourceTitle</td>
+                <td class="source-summary">@searchResult.Summary</td>
+                <td class="centered source-url"><a href="@searchResult.SourceURL">Link to source</a></td>
+                <td class="centered source-provider">@searchResult.Provider</td>
+                <td class="centered">
+                    <input type="checkbox" class="summary-check-box" onclick="Search.AddToSummary($(this).closest('tr'))">
+                </td>
+            </tr>
+        }
+    </table>
+</div>
 

@@ -1,9 +1,9 @@
-﻿using InvestigationApp.Data.Services;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using InvestigationApp.Infrastructure.Services;
 using InvestigationApp.Models;
 using Microsoft.Extensions.Configuration;
 

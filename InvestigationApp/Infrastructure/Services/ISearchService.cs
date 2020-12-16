@@ -1,13 +1,12 @@
-﻿using InvestigationApp.Data.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using InvestigationApp.Data.Models;
 
-namespace InvestigationApp.Data.Services
+namespace InvestigationApp.Infrastructure.Services
 {
     public interface ISearchService
     {
-        Task<List<Search>> GetBySearchTerm(string searchTerm);
+        Task<List<Search>> GetGoogleResultsBySearchTerm(string searchTerm, int startFrom);
+        Task<List<Search>> GetBingResultsBySearchTerm(string searchTerm, int startFrom);
     }
 }

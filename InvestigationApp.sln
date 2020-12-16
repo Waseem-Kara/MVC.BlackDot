@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvestigationApp", "InvestigationApp\InvestigationApp.csproj", "{13C2231C-A4CE-4C58-B562-0A5A9DDD2A7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvestigationApp.Data", "InvestigationApp.Data\InvestigationApp.Data.csproj", "{69EF51AB-47C6-41FD-88CD-0E7C586CCD61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvestigationApp.Data", "InvestigationApp.Data\InvestigationApp.Data.csproj", "{69EF51AB-47C6-41FD-88CD-0E7C586CCD61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvestigationApp.Tests", "InvestigationApp.Tests\InvestigationApp.Tests.csproj", "{0952604D-371F-4B16-B5AC-38F571217A6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{69EF51AB-47C6-41FD-88CD-0E7C586CCD61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69EF51AB-47C6-41FD-88CD-0E7C586CCD61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69EF51AB-47C6-41FD-88CD-0E7C586CCD61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0952604D-371F-4B16-B5AC-38F571217A6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0952604D-371F-4B16-B5AC-38F571217A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0952604D-371F-4B16-B5AC-38F571217A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0952604D-371F-4B16-B5AC-38F571217A6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

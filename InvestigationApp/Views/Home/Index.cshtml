@@ -3,14 +3,39 @@
 @{
 
 }
+<script src="~/js/search.js"></script>
+<link href="~/css/search.css" rel="stylesheet" />
 
-<div class="row">    
-    <div class="col-lg-6">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search..">
-            <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Go!</button>
-            </span>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 input-wrapper">
+            <div class="input-group">
+                <input id="searchInput" type="text" class="form-control" placeholder="Search..">
+                <span class="input-group-btn">
+                    <button id="searchBtn" onclick="Search.SearchByTerm($('#searchInput').val(), '@Url.Action("GetSearchResults", "Search")', true)" class="btn btn-default" type="button">Go!</button>
+                </span>
+            </div>
         </div>
     </div>
 </div>
+
+<div class="overlay">
+    <div id="loading"><h2>Loading...</h2></div>
+</div>
+<div id="summarySubmit" hidden="hidden">
+    <button class="btn btn-sm btn-primary summary-submit-btn" title="Download Summary" onclick="Search.DownloadSummary('@Url.Action("DownloadDocument", "Document")')">Download Summary</button>
+</div>
+<div id="searchResults">
+
+</div>
+
+
+<nav id="paginationNav" hidden="hidden">
+    <ul class="pagination justify-content-center">
+        <li class="page-item"><a class="page-link disabled" href="javascript:Search.PreviousPage($('#searchInput').val(), '@Url.Action("GetSearchResults", "Search")')" id="previousPageLink" tabindex="-1">Previous</a></li>
+        <li class="page-item"><a class="page-link" id="pageNumber" href="#">1</a></li>
+        <li class="page-item">
+            <a class="page-link" id="nextPageLink" href="javascript:Search.NextPage($('#searchInput').val(), '@Url.Action("GetSearchResults", "Search")')">Next</a>
+        </li>
+    </ul>
+</nav>
